@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CEG — Cahaya Edukasi Global</title>
+  <meta name="description" content="CEG helps Indonesian students study in China with admissions strategy, document preparation, and honest guidance." />
+  <link rel="icon" href="ceg-logo.png" />
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.10);
+      --ink:#f6f7fb;
+      --muted: rgba(246,247,251,.72);
+      --brand:#61b2ff;
+      --accent:#f6b400;
+      --accent2:#ff6b6b;
+      --radius:22px;
+      --max:1120px;
+      --shadow: 0 20px 70px rgba(0,0,0,.35);
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 12% 8%, rgba(97,178,255,.22), transparent 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(246,180,0,.18), transparent 55%),
+        radial-gradient(900px 700px at 60% 95%, rgba(255,107,107,.14), transparent 60%),
+        var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding: 18px 18px 72px;}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(12px) saturate(160%);
+      background: rgba(11,16,32,.55);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{max-width:var(--max);margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.2px}
+    .brand img{width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.08);padding:6px;border:1px solid rgba(255,255,255,.10)}
+    .links{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .links a{color:rgba(246,247,251,.82);font-weight:800;padding:10px 10px;border-radius:14px}
+    .links a:hover{background:rgba(255,255,255,.06)}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding: 12px 16px;border-radius: 16px;border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(246,247,251,.92);
+      font-weight:900;cursor:pointer;
+      box-shadow: 0 14px 40px rgba(0,0,0,.25);
+      transition: transform .14s ease, box-shadow .14s ease, background .14s ease, border-color .14s ease;
+    }
+    .btn:hover{transform: translateY(-1px);background: rgba(255,255,255,.09);border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      border:none;
+      color:#140b00;
+      background: linear-gradient(180deg, rgba(246,180,0,1), rgba(240,160,0,1));
+      box-shadow: 0 18px 55px rgba(246,180,0,.22);
+    }
+    .btn.primary:hover{box-shadow: 0 22px 70px rgba(246,180,0,.26)}
+    .btn.ghost{background:transparent;box-shadow:none}
+
+    /* HERO */
+    .hero{padding: 42px 0 10px;display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;align-items:stretch}
+    .card{border:1px solid var(--stroke);background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding: 22px 22px 20px;position:relative;overflow:hidden}
+    .hero-left:before{
+      content:"";
+      position:absolute;inset:-120px -120px auto auto;
+      width:360px;height:360px;border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(97,178,255,.35), transparent 60%);
+      filter: blur(0px);
+      transform: rotate(12deg);
+      pointer-events:none;
+    }
+    .logo-big{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+    .logo-big img{width:120px;height:auto}
+    .logo-big .t{display:flex;flex-direction:column;line-height:1.1}
+    .logo-big .t strong{font-size:20px;letter-spacing:.3px}
+    .logo-big .t span{color:var(--muted);font-weight:800;font-size:13px}
+
+    h1{margin: 8px 0 10px;font-size: clamp(30px, 3.4vw, 46px);line-height:1.08;letter-spacing:-.6px}
+    .sub{margin:0;color:var(--muted);font-size:16.5px;line-height:1.65;max-width:64ch}
+
+    .kicker{display:inline-flex;align-items:center;gap:10px;margin-top:14px;
+      padding: 8px 12px;border-radius:999px;
+      background: rgba(97,178,255,.12);
+      border:1px solid rgba(97,178,255,.22);
+      color: rgba(246,247,251,.90);
+      font-weight:900;font-size:13px;
+    }
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 6px rgba(246,180,0,.16)}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
+    .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:10px 12px;border-radius:999px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      color: rgba(246,247,251,.86);
+      font-weight:900;font-size:13px;
+    }
+    .check{width:18px;height:18px;border-radius:7px;display:inline-grid;place-items:center;
+      background: rgba(246,180,0,.16);
+      border:1px solid rgba(246,180,0,.25);
+      color: rgba(246,180,0,1);
+      font-size:12px;
+    }
+
+    .hero-right{padding: 18px;display:flex;flex-direction:column;gap:12px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .stat{border:1px solid rgba(255,255,255,.10);border-radius:18px;background: rgba(255,255,255,.06);padding:14px}
+    .stat b{display:block;font-size:15px;letter-spacing:-.2px}
+    .stat span{display:block;color:var(--muted);font-weight:800;font-size:13px;line-height:1.45;margin-top:6px}
+
+    .mini-cta{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px;
+      border:1px solid rgba(255,255,255,.10);border-radius:18px;background: rgba(255,255,255,.06);
+      padding:14px
+    }
+    .mini-cta h3{margin:0;letter-spacing:-.2px}
+    .mini-cta p{margin:0;color:var(--muted);font-weight:800;line-height:1.6}
+
+    /* SECTIONS */
+    section{padding: 28px 0 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin: 18px 0 14px}
+    .section-head h2{margin:0;font-size: clamp(22px, 2.2vw, 30px);letter-spacing:-.4px}
+    .section-head p{margin:0;color:var(--muted);font-weight:800;max-width:72ch;line-height:1.6}
+
+    .grid{display:grid;grid-template-columns: repeat(3, 1fr);gap: 14px}
+    .tile{padding:16px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.10);background: rgba(255,255,255,.06)}
+    .tile .icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+      background: rgba(246,180,0,.14);border:1px solid rgba(246,180,0,.24);font-size:18px;margin-bottom:10px}
+    .tile h3{margin:2px 0 6px;letter-spacing:-.25px}
+    .tile p{margin:0;color:var(--muted);font-weight:800;line-height:1.6}
+
+    .band{margin-top:16px;padding:18px;border-radius: calc(var(--radius) + 6px);
+      border:1px solid rgba(255,255,255,.12);
+      background: radial-gradient(900px 350px at 20% 0%, rgba(246,180,0,.20), transparent 55%),
+                  radial-gradient(900px 350px at 85% 20%, rgba(97,178,255,.20), transparent 55%),
+                  rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap
+    }
+    .band h3{margin:0;letter-spacing:-.25px}
+    .band p{margin:0;color:var(--muted);font-weight:800;line-height:1.6;max-width:70ch}
+
+    footer{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.10);color:rgba(246,247,251,.65);font-weight:800;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .hero{grid-template-columns: 1fr}
+      .grid{grid-template-columns: 1fr}
+    }
+    @media (max-width: 560px){
+      .links{display:none}
+      .logo-big img{width:105px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" >
+        <img src="ceg-logo.png" alt="CEG" />
+        <span>CEG</span>
+      </a>
+
+      <div class="links">
+        <a href="documents.html">Documents</a>
+        <a href="universities.html">Universities</a>
+<a class="btn primary" href="https://wa.me/6282132369259" target="_blank">Free Consultation</a>
+      </div>
+
+      <a class="btn primary" href="https://wa.me/6282132369259" target="_blank" style="display:none" id="mobileCta">Consult</a>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card hero-left">
+        <div class="logo-big">
+          <img src="ceg-logo.png" alt="Cahaya Edukasi Global" />
+          <div class="t">
+            <strong>Cahaya Edukasi Global</strong>
+            <span>Study in China • Strategy • Documents • Scholarships</span>
+          </div>
+        </div>
+
+        <div class="kicker"><span class="dot"></span> Admissions guidance that feels calm, not chaotic</div>
+        <h1>Your bridge to higher education in China.</h1>
+        <p class="sub">
+          We help Indonesian students apply to Chinese universities with a structured plan: choosing the right intake,
+          preparing the required documents, and aligning your profile with realistic scholarship pathways.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="documents.html">Start with Documents</a>
+          <a class="btn" href="https://wa.me/6282132369259" target="_blank">WhatsApp Consultation</a>
+          <a class="btn ghost" href="universities.html">Browse Universities →</a>
+        </div>
+
+        <div class="pills">
+          <span class="pill"><span class="check">✓</span> Clear checklist</span>
+          <span class="pill"><span class="check">✓</span> Document templates</span>
+          <span class="pill"><span class="check">✓</span> Student-first advice</span>
+          <span class="pill"><span class="check">✓</span> Fast response</span>
+        </div>
+      </div>
+
+      <div class="card hero-right">
+        <div class="stats">
+          <div class="stat"><b>Strategy</b><span>Pick universities and programs that match grades, goals, and timeline.</span></div>
+          <div class="stat"><b>Documents</b><span>Checklist + review so you submit clean, correct, and complete.</span></div>
+          <div class="stat"><b>Scholarships</b><span>Guidance to strengthen your profile for available funding paths.</span></div>
+          <div class="stat"><b>Support</b><span>We keep it moving — no “wait two weeks” nonsense.</span></div>
+        </div>
+
+        <div class="mini-cta">
+          <div>
+            <h3>Most students should start here</h3>
+            <p>Download the required documents list and upload what you already have. We’ll tell you what’s missing.</p>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn primary" href="documents.html">Open Document Checklist</a>
+            <a class="btn" href="https://wa.me/6282132369259" target="_blank">Ask on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES (SHORT) -->
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>What we do</h2>
+          <p>Less talking, more results. We turn a confusing process into a simple, executable plan.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="tile"><div class="icon">🎯</div><h3>Targeting</h3><p>University + major shortlist based on your profile, city, and intake.</p></div>
+        <div class="tile"><div class="icon">📝</div><h3>Document Prep</h3><p>Registration form, translations checklist, CV/SOP guidance, and final review.</p></div>
+        <div class="tile"><div class="icon">🎓</div><h3>Scholarship Fit</h3><p>We align expectations and strengthen what scholarship reviewers actually care about.</p></div>
+      </div>
+
+      <div class="band">
+        <div>
+          <h3>Ready to start?</h3>
+          <p>Start with documents. It’s the fastest way to know your next steps — even if your file set is incomplete.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="documents.html">View Documents</a>
+          <a class="btn" href="https://wa.me/6282132369259" target="_blank">Consult Now</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>PT Cahaya Edukasi Global · Jakarta · NIB 2810250043204</span>
+      <span>© <span id="year"></span> CEG</span>
+    </footer>
+
+  </main>
+
+  <script>
+    // Mobile CTA
+    const mobileCta = document.getElementById("mobileCta");
+    const mq = window.matchMedia("(max-width: 560px)");
+    function toggleMobileCta(){ mobileCta.style.display = mq.matches ? "inline-flex" : "none"; }
+    mq.addEventListener?.("change", toggleMobileCta);
+    toggleMobileCta();
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
