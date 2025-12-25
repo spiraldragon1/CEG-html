@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ — Study in China | CEG</title>
+  <meta name="description" content="Frequently asked questions about studying in China with Cahaya Edukasi Global: fees, documents, scholarships, language requirements, and process." />
+  <link rel="icon" href="ceg-logo.png" />
+
+  <style>
+    :root{
+      --muted:#5f6b7a;
+      --accent:#f6b400;
+      --radius:22px;
+      --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:#1f2937;
+      background:
+        radial-gradient(1200px 700px at 12% 8%, rgba(255,236,179,.45), transparent 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(186,220,255,.45), transparent 55%),
+        radial-gradient(900px 700px at 60% 95%, rgba(255,214,214,.35), transparent 60%),
+        #f7f9fc;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* NAVBAR (same as other pages) */
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px) saturate(160%);
+      background: rgba(255,255,255,.9);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+    }
+
+    .brand img{
+      width:120px;
+      height:70px;
+      border-radius:14px;
+      background:#ffffff;
+      padding:6px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:0 6px 14px rgba(0,0,0,.08);
+    }
+
+    .brand span{
+      font-size:24px;
+      font-weight:900;
+      color:#111827;
+      line-height:1;
+      letter-spacing:.2px;
+    }
+
+    .links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      font-weight:800;
+      padding:8px 10px;
+      border-radius:14px;
+      font-size:14px;
+      color:#1f2937;
+    }
+
+    .links a:hover{
+      background:rgba(0,0,0,.04);
+    }
+
+    .links a.active{
+      background:rgba(0,0,0,.06);
+    }
+
+    /* BUTTONS */
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#ffffff;
+      color:#1f2937;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      transition:all .14s ease;
+      font-size:14px;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(0,0,0,.14);
+    }
+
+    .btn.primary{
+      border:none;
+      color:#3b2a00;
+      background:linear-gradient(180deg,#ffd84d,#f6b400);
+      box-shadow:0 18px 55px rgba(246,180,0,.35);
+    }
+
+    .btn.whatsapp{
+      border:none;
+      color:#0b1f14;
+      background:linear-gradient(180deg,#25D366,#1ebe5d);
+      box-shadow:0 18px 55px rgba(37,211,102,.25);
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 80px;
+    }
+
+    h1{
+      margin:6px 0 8px;
+      font-size:clamp(26px,3vw,40px);
+      color:#111827;
+      letter-spacing:-.4px;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      line-height:1.7;
+      max-width:78ch;
+    }
+
+    .q-list{
+      margin-top:20px;
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#ffffff;
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .q-list-title{
+      font-weight:1000;
+      margin-bottom:8px;
+      color:#111827;
+    }
+
+    .q-list ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      columns:2;
+      column-gap:28px;
+    }
+
+    .q-list li{
+      margin:6px 0;
+      break-inside:avoid;
+    }
+
+    .q-list a{
+      font-weight:800;
+      color:#111827;
+    }
+
+    .q-list a:hover{
+      text-decoration:underline;
+    }
+
+    .faq-section{
+      margin-top:26px;
+      display:grid;
+      gap:12px;
+    }
+
+    .faq-item{
+      border-radius:18px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#ffffff;
+      box-shadow:0 10px 26px rgba(0,0,0,.06);
+      padding:14px 16px 14px;
+    }
+
+    .faq-q{
+      font-weight:1000;
+      color:#111827;
+      margin:0 0 6px;
+    }
+
+    .faq-a{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      line-height:1.7;
+      font-size:14.5px;
+    }
+
+    .faq-a b{
+      color:#111827;
+    }
+
+    .cta-band{
+      margin-top:28px;
+      padding:18px 18px;
+      border-radius:22px;
+      border:1px solid rgba(0,0,0,.08);
+      background:
+        radial-gradient(700px 260px at 15% 0%, rgba(246,180,0,.18), transparent 55%),
+        radial-gradient(700px 260px at 85% 20%, rgba(96,165,250,.18), transparent 55%),
+        #ffffff;
+      box-shadow:0 16px 40px rgba(0,0,0,.08);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .cta-band h2{
+      margin:0 0 4px;
+      font-size:20px;
+      letter-spacing:-.25px;
+      color:#111827;
+    }
+
+    .cta-band p{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      line-height:1.6;
+      max-width:60ch;
+      font-size:14.5px;
+    }
+
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid rgba(0,0,0,.08);
+      color:rgba(31,41,55,.65);
+      font-weight:800;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+
+    @media(max-width:900px){
+      .q-list ul{columns:1}
+    }
+
+    @media(max-width:560px){
+      .links{display:none}
+      .brand span{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="ceg-logo.png" alt="CEG">
+        <span>Cahaya Edukasi Global</span>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="universities.html">Universities</a>
+        <a href="documents.html">Documents</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="articles.html">Articles</a>
+
+        <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">
+          Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <h1>Frequently Asked Questions</h1>
+    <p class="sub">
+      These are the questions parents and students ask us the most about studying in China:
+      fees, documents, language, scholarship chances, and how the whole process actually works.
+    </p>
+
+    <!-- QUESTIONS LIST FIRST -->
+    <div class="q-list">
+      <div class="q-list-title">Most common questions</div>
+      <ul>
+        <li><a href="#q1">Do I have to pay CEG a service fee?</a></li>
+        <li><a href="#q2">Can you guarantee that I will be accepted?</a></li>
+        <li><a href="#q3">What is the minimum requirement to study in China?</a></li>
+        <li><a href="#q4">Can I study in China without speaking Chinese?</a></li>
+        <li><a href="#q5">What documents do I need to prepare first?</a></li>
+        <li><a href="#q6">Can I get a scholarship? How realistic is it?</a></li>
+        <li><a href="#q7">How long does the application process usually take?</a></li>
+        <li><a href="#q8">Do my parents need to come to your office?</a></li>
+        <li><a href="#q9">Is consultation really free?</a></li>
+        <li><a href="#q10">What is the best way to start if I’m still confused?</a></li>
+      </ul>
+    </div>
+
+    <!-- ANSWERS -->
+    <div class="faq-section">
+      <div class="faq-item" id="q1">
+        <p class="faq-q">1. Do I have to pay CEG a service fee?</p>
+        <p class="faq-a">
+          <b>Most basic consultation is free.</b> For many programs, our cost is covered by the universities we work with,
+          so you don’t need to pay an extra “agency fee” just to ask questions and check options.
+          If a certain service requires payment (for example, special handling or translation),
+          we will explain the fee clearly before you decide anything.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q2">
+        <p class="faq-q">2. Can you guarantee that I will be accepted?</p>
+        <p class="faq-a">
+          <b>No honest agency can guarantee 100% acceptance.</b>
+          The final decision is always made by the university.
+          What we can do is:
+          choose realistic targets, prepare your documents properly,
+          and avoid basic mistakes that usually cause delays or rejection.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q3">
+        <p class="faq-q">3. What is the minimum requirement to study in China?</p>
+        <p class="faq-a">
+          It depends on the program (Bachelor, Master, language, etc.), but in general you should have:
+          <br><br>
+          • Completed the previous education level (SMA/SMK/Equivalent for Bachelor, Bachelor for Master) <br>
+          • A consistent academic record (doesn’t have to be perfect, but no major “holes”) <br>
+          • A valid passport <br>
+          • Basic financial ability for tuition + living cost, or realistic scholarship plan. <br><br>
+          If you’re not sure whether your grades are “good enough”, send your report/transcript — we’ll be honest about it.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q4">
+        <p class="faq-q">4. Can I study in China without speaking Chinese?</p>
+        <p class="faq-a">
+          Yes. There are <b>English-taught programs</b> and also <b>Chinese language programs</b> for beginners.
+          <br><br>
+          • If you want a degree in English: some universities will ask for IELTS / TOEFL. <br>
+          • If you want to learn Chinese first: no HSK is needed for beginner language programs. <br><br>
+          We will advise whether you should start with language first or go straight to a degree based on your profile.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q5">
+        <p class="faq-q">5. What documents do I need to prepare first?</p>
+        <p class="faq-a">
+          The fastest way is to start with the core documents:
+          <br><br>
+          • Passport scan <br>
+          • Latest transcript <br>
+          • Graduation certificate (if already available) <br>
+          • White background photo <br><br>
+          Optional (can follow later): CV, motivation letter / study plan, recommendation letter.
+          <br><br>
+          You can download our full checklist on the <b>Documents</b> page, then send your files via WhatsApp for review.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q6">
+        <p class="faq-q">6. Can I get a scholarship? How realistic is it?</p>
+        <p class="faq-a">
+          Scholarship is possible, but it depends on:
+          <br><br>
+          • Your grades and academic background <br>
+          • Your language skills (HSK / IELTS / TOEFL) <br>
+          • The city and type of university you choose <br>
+          • How early you apply relative to the intake <br><br>
+          We don’t like to “sweet talk” parents. We will tell you honestly whether scholarship is <b>strong chance</b>,
+          <b>possible but competitive</b>, or <b>not realistic</b> for the current intake.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q7">
+        <p class="faq-q">7. How long does the application process usually take?</p>
+        <p class="faq-a">
+          Rough guideline (can vary by university and intake):
+          <br><br>
+          • Document preparation: 1–3 weeks (depending on how fast you move) <br>
+          • Application submission & review: 4–8 weeks <br>
+          • Admission + visa process: 4–6 weeks <br><br>
+          This is why we always recommend starting early.
+          If you contact us last-minute, the options (and scholarship chance) will be more limited.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q8">
+        <p class="faq-q">8. Do my parents need to come to your office?</p>
+        <p class="faq-a">
+          Not always. Most steps can be done online through:
+          <br><br>
+          • WhatsApp call / chat <br>
+          • Document sharing via Drive / email <br><br>
+          Visiting the office is optional but useful if parents want a face-to-face discussion.
+          If you plan to visit, it’s better to <b>book a time via WhatsApp</b> so we can prepare and avoid waiting.
+        </p>
+      </div>
+
+      <div class="faq-item" id="q9">
+        <p class="faq-q">9. Is consultation really free?</p>
+        <p class="faq-a">
+          Yes. Asking questions, checking your basic profile, and exploring options is free.
+          We only discuss fees if there is a <b>clearly defined extra service</b> needed
+          (for example, special document translation or certain specific program handling).
+        </p>
+      </div>
+
+      <div class="faq-item" id="q10">
+        <p class="faq-q">10. What is the best way to start if I’m still confused?</p>
+        <p class="faq-a">
+          The simplest starting point is:
+          <br><br>
+          1. Prepare your basic documents (passport, transcript, photo) <br>
+          2. Tell us your target: <b>city, major, and budget range</b> <br>
+          3. Chat us on WhatsApp and send the files <br><br>
+          From there, we can show you: which universities make sense, how strong your profile is,
+          and whether scholarship is realistic for your case.
+        </p>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <div>
+        <h2>Still have a question that is not listed here?</h2>
+        <p>
+          Send your situation in one message (grades, major, budget, language level),
+          and we’ll reply with a direct, realistic answer — not marketing talk.
+        </p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">Ask on WhatsApp</a>
+        <a class="btn primary" href="documents.html">Check Document Checklist</a>
+      </div>
+    </div>
+
+    <footer>
+      <span>PT Cahaya Edukasi Global · Jakarta · NIB 2810250043204</span>
+      <span>© <span id="year"></span> CEG</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

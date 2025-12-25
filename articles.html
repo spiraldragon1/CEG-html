@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Articles — Study in China Insights | CEG</title>
+  <meta name="description" content="Guides, tips, and insights for students planning to study in China. Scholarships, application process, and life in China." />
+  <link rel="icon" href="ceg-logo.png" />
+
+  <style>
+    :root{
+      --muted:#5f6b7a;
+      --radius:22px;
+      --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:#1f2937;
+      background:
+        radial-gradient(1200px 700px at 12% 8%, rgba(255,236,179,.45), transparent 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(186,220,255,.45), transparent 55%),
+        radial-gradient(900px 700px at 60% 95%, rgba(255,214,214,.35), transparent 60%),
+        #f7f9fc;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    /* NAV */
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px) saturate(160%);
+      background: rgba(255,255,255,.9);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      font-weight:900;
+    }
+
+    .brand img{
+      width:120px;
+      height:70px;
+      border-radius:14px;
+      background:#fff;
+      padding:6px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:0 6px 14px rgba(0,0,0,.08);
+    }
+
+    .brand span{
+      font-size:24px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    .links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      font-weight:800;
+      padding:8px 10px;
+      border-radius:14px;
+      font-size:14px;
+      color:#1f2937;
+    }
+
+    .links a:hover{
+      background:rgba(0,0,0,.04);
+    }
+
+    .links a.active{
+      background:rgba(0,0,0,.06);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#ffffff;
+      font-weight:900;
+      box-shadow:0 10px 24px rgba(0,0,0,.1);
+      font-size:14px;
+      transition:.14s;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(0,0,0,.14);
+    }
+
+    .btn.whatsapp{
+      border:none;
+      color:#0b1f14;
+      background:linear-gradient(180deg,#25D366,#1ebe5d);
+      box-shadow:0 18px 55px rgba(37,211,102,.25);
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 80px;
+    }
+
+    h1{
+      margin:6px 0 8px;
+      font-size:clamp(26px,3vw,40px);
+      color:#111827;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      line-height:1.7;
+      max-width:78ch;
+    }
+
+    .articles{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+      gap:16px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:20px;
+      box-shadow:0 14px 36px rgba(0,0,0,.08);
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.08);
+      background:rgba(0,0,0,.03);
+      font-size:12px;
+      font-weight:900;
+      color:#374151;
+    }
+
+    .card h3{
+      margin:0;
+      font-size:17px;
+      color:#111827;
+      letter-spacing:-.1px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .read{
+      margin-top:auto;
+      font-weight:900;
+      font-size:13px;
+      color:#111827;
+      text-decoration:underline;
+    }
+
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid rgba(0,0,0,.08);
+      color:rgba(31,41,55,.65);
+      font-weight:800;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+
+    @media(max-width:560px){
+      .links{display:none}
+      .brand span{font-size:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="ceg-logo.png" alt="CEG">
+        <span>Cahaya Edukasi Global</span>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="universities.html">Universities</a>
+        <a href="documents.html">Documents</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+
+        <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">
+          Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <h1>Articles & Guides</h1>
+    <p class="sub">
+      Quick guides to help students and parents understand the real process, not just marketing talk.
+    </p>
+
+    <div class="articles">
+
+      <div class="card">
+        <span class="tag">Getting Started</span>
+        <h3>First Steps: How to Start Planning Study in China</h3>
+        <p>
+          Unsure where to begin? This guide explains what to prepare first so you don’t get overwhelmed.
+        </p>
+        <a href="#" class="read">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Scholarship</span>
+        <h3>Scholarship Reality: Who Actually Gets It?</h3>
+        <p>
+          Many agencies promise “guaranteed scholarship”. Here’s the realistic version based on profiles.
+        </p>
+        <a href="#" class="read">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Documents</span>
+        <h3>Checklist Mistakes That Delay Applications</h3>
+        <p>
+          Common document errors that cause universities to delay or reject applications — and how to avoid them.
+        </p>
+        <a href="#" class="read">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Life in China</span>
+        <h3>What Daily Student Life in China Actually Looks Like</h3>
+        <p>
+          From dorms to food to budgeting — real expectations instead of Instagram highlight reels.
+        </p>
+        <a href="#" class="read">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Language</span>
+        <h3>Do I Need Chinese Before Going?</h3>
+        <p>
+          When it’s okay to start without Chinese — and when learning early saves you time later.
+        </p>
+        <a href="#" class="read">Coming soon</a>
+      </div>
+
+    </div>
+
+    <footer>
+      <span>PT Cahaya Edukasi Global · Jakarta · NIB 2810250043204</span>
+      <span>© <span id="year"></span> CEG</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

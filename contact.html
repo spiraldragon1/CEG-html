@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us | CEG</title>
+  <meta name="description" content="Contact Cahaya Edukasi Global. WhatsApp, email, or visit our Jakarta office to discuss study in China plans." />
+  <link rel="icon" href="ceg-logo.png" />
+
+  <style>
+    :root{
+      --muted:#5f6b7a;
+      --accent:#f6b400;
+      --radius:22px;
+      --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:#1f2937;
+      background:
+        radial-gradient(1200px 700px at 12% 8%, rgba(255,236,179,.45), transparent 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(186,220,255,.45), transparent 55%),
+        radial-gradient(900px 700px at 60% 95%, rgba(255,214,214,.35), transparent 60%),
+        #f7f9fc;
+    }
+
+    a{ text-decoration:none; color:inherit }
+    img{ max-width:100%; display:block }
+
+    /* NAVBAR */
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px) saturate(160%);
+      background: rgba(255,255,255,.9);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      font-weight:900;
+    }
+
+    .brand img{
+      width:120px;
+      height:70px;
+      border-radius:14px;
+      background:#ffffff;
+      padding:6px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:0 6px 14px rgba(0,0,0,.08);
+    }
+
+    .brand span{
+      font-size:24px;
+      font-weight:900;
+      color:#111827;
+      line-height:1;
+    }
+
+    .links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      font-weight:800;
+      padding:8px 10px;
+      border-radius:14px;
+      font-size:14px;
+      color:#1f2937;
+    }
+
+    .links a:hover{
+      background:rgba(0,0,0,.04);
+    }
+
+    /* BUTTONS */
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#ffffff;
+      color:#1f2937;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      transition:all .14s ease;
+      font-size:14px;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(0,0,0,.14);
+    }
+
+    .btn.primary{
+      border:none;
+      color:#3b2a00;
+      background:linear-gradient(180deg,#ffd84d,#f6b400);
+      box-shadow:0 18px 55px rgba(246,180,0,.35);
+    }
+
+    .btn.whatsapp{
+      border:none;
+      color:#0b1f14;
+      background:linear-gradient(180deg,#25D366,#1ebe5d);
+      box-shadow:0 18px 55px rgba(37,211,102,.25);
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 80px;
+    }
+
+    h1{
+      margin:6px 0 8px;
+      font-size:clamp(26px,3vw,40px);
+      color:#111827;
+      letter-spacing:-.4px;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      line-height:1.65;
+      max-width:75ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      margin-top:22px;
+      align-items:stretch;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:22px;
+      background:#ffffff;
+      box-shadow:0 16px 40px rgba(0,0,0,.08);
+      padding:18px;
+    }
+
+    .section-title{
+      font-weight:1000;
+      margin-bottom:6px;
+      color:#111827;
+    }
+
+    .field{
+      margin:10px 0;
+    }
+
+    .info{
+      display:grid;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .info-box{
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:16px;
+      padding:12px 14px;
+      background:#fff;
+    }
+
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid rgba(0,0,0,.08);
+      color:rgba(31,41,55,.65);
+      font-weight:800;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    @media(max-width:560px){
+      .links{display:none}
+      .brand span{font-size:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="ceg-logo.png" alt="CEG">
+        <span>Cahaya Edukasi Global</span>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="universities.html">Universities</a>
+        <a href="documents.html">Documents</a>
+        <a href="faq.html">FAQ</a>
+        <a href="articles.html">Articles</a>
+
+        <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">
+          Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <h1>Contact Us</h1>
+    <p class="sub">
+      Reach out anytime — WhatsApp, phone, or visit our Jakarta office. We’ll help map the next steps for your study plan.
+    </p>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <div class="card">
+        <div class="section-title">Office Information</div>
+
+       <div class="info">
+
+  <div class="info-box">
+    <b>Head Office — Jakarta Pusat</b><br>
+    Jl. Gunung Sahari II No.14E 11, RT.11/RW.7, Gn. Sahari Sel.,<br>
+    Jakarta, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10610
+    <br><br>
+    <b>Phone:</b> (021) 4219121
+  </div>
+
+  <div class="info-box">
+    <b>Branch Office — Kuningan</b><br>
+    The H Tower, Suite 19D, Jl. HR. Rasuna Said kav.20,<br>
+    Kuningan, RT.1/RW.5, Karet Kuningan, Kecamatan Setiabudi,<br>
+    Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12940
+    <br><br>
+    <b>Phone:</b> (021) 29533200
+  </div>
+
+  <div class="info-box">
+    <b>Office Hours</b><br>
+    Closes soon · 17:00 · Opens 08:00 Fri
+  </div>
+
+  <div class="info-box">
+    <b>Email</b><br>
+    marketing@ceg-abroad.com
+  </div>
+
+</div>
+
+
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">WhatsApp Us</a>
+          <a class="btn primary" href="mailto:marketing@ceg-abroad.com">Send Email</a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+       <!-- RIGHT -->
+<div class="card">
+  <div class="section-title">Find Us on Map</div>
+
+  <b>Jakarta Pusat Office</b>
+  <iframe
+    src="https://www.google.com/maps?q=Jl.%20Gunung%20Sahari%20II%20No.14E%2011%20Jakarta&output=embed"
+    width="100%" height="260" style="border:0;border-radius:16px;margin-top:6px"
+    allowfullscreen loading="lazy">
+  </iframe>
+
+  <hr style="border:none;border-top:1px solid rgba(0,0,0,.08);margin:14px 0">
+
+  <b>Kuningan Office</b>
+  <iframe
+    src="https://www.google.com/maps?q=The%20H%20Tower%20Rasuna%20Said%20Jakarta&output=embed"
+    width="100%" height="260" style="border:0;border-radius:16px;margin-top:6px"
+    allowfullscreen loading="lazy">
+  </iframe>
+
+  <p class="sub" style="margin-top:14px">
+    Tip: book via WhatsApp first so we can prepare and avoid waiting time.
+  </p>
+</div>
+
+    
+
+    <footer>
+      <span>PT Cahaya Edukasi Global · Jakarta · NIB 2810250043204</span>
+      <span>© <span id="year"></span> CEG</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

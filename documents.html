@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Required Documents | CEG</title>
+  <meta name="description" content="Download the required documents checklist for studying in China. Upload what you have and get a clear next step." />
+  <link rel="icon" href="ceg-logo.png" />
+
+  <style>
+    :root{
+      --muted:#5f6b7a;
+      --accent:#f6b400;
+      --radius:22px;
+      --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:#1f2937;
+      background:
+        radial-gradient(1200px 700px at 12% 8%, rgba(255,236,179,.45), transparent 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(186,220,255,.45), transparent 55%),
+        radial-gradient(900px 700px at 60% 95%, rgba(255,214,214,.35), transparent 60%),
+        #f7f9fc;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    /* NAVBAR — same as index / universities */
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px) saturate(160%);
+      background: rgba(255,255,255,.9);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+    }
+
+    .brand img{
+      width:120px;
+      height:70px;
+      border-radius:14px;
+      background:#ffffff;
+      padding:6px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:0 6px 14px rgba(0,0,0,.08);
+    }
+
+    .brand span{
+      font-size:24px;
+      font-weight:900;
+      color:#111827;
+      line-height:1;
+      letter-spacing:.2px;
+    }
+
+    .links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      font-weight:800;
+      padding:8px 10px;
+      border-radius:14px;
+      font-size:14px;
+      color:#1f2937;
+    }
+
+    .links a:hover{
+      background:rgba(0,0,0,.04);
+    }
+
+    /* BUTTONS */
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#ffffff;
+      color:#1f2937;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      transition:all .14s ease;
+      font-size:14px;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(0,0,0,.14);
+    }
+
+    .btn.primary{
+      border:none;
+      color:#3b2a00;
+      background:linear-gradient(180deg,#ffd84d,#f6b400);
+      box-shadow:0 18px 55px rgba(246,180,0,.35);
+    }
+
+    .btn.primary:hover{
+      box-shadow:0 22px 70px rgba(246,180,0,.45);
+    }
+
+    .btn.whatsapp{
+  border:none;
+  color:#0b1f14;
+  background: linear-gradient(180deg, #25D366, #1ebe5d);
+  box-shadow: 0 18px 55px rgba(37,211,102,.25);
+}
+
+.btn.whatsapp:hover{
+  box-shadow: 0 22px 70px rgba(37,211,102,.30);
+}
+
+
+    /* PAGE */
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 80px;
+    }
+
+    h1{
+      margin:8px 0 6px;
+      font-size:clamp(26px,3.2vw,40px);
+      letter-spacing:-.5px;
+      color:#111827;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:800;
+      line-height:1.65;
+      max-width:75ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:22px;
+      background:#ffffff;
+      box-shadow:0 16px 40px rgba(0,0,0,.08);
+      padding:18px;
+    }
+
+    .section-title{
+      font-weight:1000;
+      color:#111827;
+      margin-bottom:8px;
+      letter-spacing:-.2px;
+    }
+
+    ul{padding-left:18px;margin:10px 0}
+    li{margin:8px 0;font-weight:800;color:#374151}
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(0,0,0,.04);
+      border:1px solid rgba(0,0,0,.08);
+      font-weight:900;
+      font-size:13px;
+      margin-top:6px;
+    }
+
+    .doc{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#ffffff;
+      margin-top:12px;
+      box-shadow:0 8px 18px rgba(0,0,0,.05);
+    }
+
+    .doc span{
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    .upload{
+      border:2px dashed rgba(0,0,0,.14);
+      border-radius:18px;
+      padding:16px;
+      text-align:center;
+      background:#fcfcfc;
+    }
+
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid rgba(0,0,0,.08);
+      color:rgba(31,41,55,.65);
+      font-weight:800;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    @media(max-width:560px){
+      .links{display:none}
+      .brand span{font-size:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="ceg-logo.png" alt="CEG" />
+        <span>Cahaya Edukasi Global</span>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="universities.html">Universities</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="articles.html">Articles</a>
+
+        <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">
+          Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <h1>Required Documents</h1>
+    <p class="sub">
+      Most application delays happen because of incomplete documents. Start here — download the checklist,
+      prepare what you already have, and upload the rest later.
+    </p>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <div class="card">
+        <div class="section-title">📄 Documents Checklist</div>
+
+        <ul>
+          <li>Passport (scan)</li>
+          <li>Latest academic transcript</li>
+          <li>Graduation certificate (if available)</li>
+          <li>White background photo</li>
+          <li>Language certificate (HSK / IELTS — if any)</li>
+        </ul>
+
+        <div class="pill">Optional (can be submitted later)</div>
+
+        <ul>
+          <li>Study plan / SOP</li>
+          <li>Curriculum Vitae (CV)</li>
+          <li>Recommendation letter</li>
+        </ul>
+
+        <div class="doc">
+          <div>
+            <b>Student Registration Form</b>
+            <span>Tri-language (EN / CN / ID)</span>
+          </div>
+
+          <a class="btn primary" href="学生报名登记表_三语版.pdf" download>Download</a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="card">
+        <div class="section-title">⬆️ Upload What You Have</div>
+
+        <p class="sub" style="margin-bottom:10px">
+          Don’t worry if your documents are incomplete. Upload what you already have — we’ll review and tell you what’s missing.
+        </p>
+
+        <div class="upload">
+          <p class="sub">Preferred options</p>
+
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px">
+            <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">WhatsApp Upload</a>
+            <a class="btn primary" href="#">Google Drive Link</a>
+          </div>
+        </div>
+
+        <p class="sub" style="margin-top:14px">
+          After review, we’ll:
+        </p>
+
+        <ul>
+          <li>Confirm document completeness</li>
+          <li>Advise suitable universities & intakes</li>
+          <li>Explain scholarship positioning (if applicable)</li>
+        </ul>
+
+        <div style="margin-top:14px">
+          <a class="btn whatsapp" href="https://wa.me/6282132369259" target="_blank">Talk to a Consultant</a>
+
+          <div style="margin-top:8px;color:#6b7280;font-weight:800">
+            Or email us at
+            <a href="mailto:marketing@ceg-abroad.com" style="text-decoration:underline">
+              marketing@ceg-abroad.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>PT Cahaya Edukasi Global · Jakarta · NIB 2810250043204</span>
+      <span>© <span id="year"></span> CEG</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
